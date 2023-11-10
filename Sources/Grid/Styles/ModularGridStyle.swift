@@ -22,24 +22,24 @@ public struct ModularGridStyle: GridStyle {
             tracksCount(
                 tracks: self.columns,
                 spacing: self.spacing,
-                availableLength: size.width
+                availableLength: size.width - self.spacing * 2
             ) :
             tracksCount(
                 tracks: self.rows,
                 spacing: self.spacing,
-                availableLength: size.height
+                availableLength: size.height - self.spacing * 2
             )
         
         let itemSize = CGSize(
             width: itemLength(
                 tracks: self.columns,
                 spacing: self.spacing,
-                availableLength: size.width
+                availableLength: size.width - self.spacing * 2
             ),
             height: itemLength(
                 tracks: self.rows,
                 spacing: self.spacing,
-                availableLength: size.height
+                availableLength: size.height - self.spacing * 2
             )
         )
         
